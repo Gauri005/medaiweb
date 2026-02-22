@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply gradient to the whole page */
+body {
+    overflow-x: hidden;
+    margin: 0;
+    height: 100vh;
+    color: black;
+
+
+
+}
+
+.header {
+    background-image: url("PixelBin-AI-Editor-1759498491069.png");
+    background-size: cover;
+    margin: 0;
+    height: 110vh;
+}
+
+.navbar {
+    margin: auto;
+
+    border: 3px solid #66afddb5;
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 15px;
+    background-color: rgba(245, 245, 245, 0.222);
+    box-shadow: inset 2px 2px 18px 8px #66afddb5;
+}
+
+.nav {
+    /* border:2px solid red; */
+    height: 10vh;
+}
+
+.navleft {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.navleft1 {
+    /* border: 2px solid black; */
+    height: 90%;
+}
+
+.logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.name {
+    width: 70%;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.navmiddle {
+    width: 60%;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 10vh;
+    /* background-color: rgb(46, 46, 60); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+ul li a {
+    display: block;
+    color: rgb(12, 12, 12);
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: all 0.1s ease;
+}
+
+ul li a:hover {
+    background-color: #3b79b8a3;
+    height: 5vh;
+    border-radius: 10px;
+}
+
+
+
+.navright {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    /* push buttons to right side */
+    align-items: center;
+    gap: 15px;
+    /* space between buttons */
+}
+
+.navright1 {
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.navright1 a {
+    display: inline-block;
+    color: rgb(26, 26, 26);
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid rgb(23, 23, 23);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navright1 a:hover {
+    background: #54dcdc;
+    border-color: #3dcfcf;
+}
+
+.chattable {
+    margin: auto;
+    margin-top: 50px;
+    padding: 0;
+    width: 40vw;
+    height: 80vh;
+    border: 2px solid rgb(77, 146, 210);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    background-color: #688d8d36;
+    box-shadow: 2px 3px 20px 7px #34708c;
+}
+
+.tab {
+    /* border: 2px solid red; */
+    width: 30vw;
+
+
+}
+
+.tabtop {
+    height: 40vh;
+    width: 37vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.care {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 47px;
+}
+
+.time {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+}
+
+.guide {
+    text-align: center;
+}
+
+.top1 {
+    /* border: 2px solid black; */
+    width: 30vw;
+    height: 10vh;
+}
+
+.tabmiddle {
+    height: 25vh;
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 20px;
+}
+
+.ailogo {
+    border-radius: 50px;
+    display: inline-block;
+    animation: bounce 1.5s infinite;
+}
+/* bounce animation */
+@keyframes bounce{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+}
+
+
+.ai {
+    /* border: 2px solid rgb(8, 8, 15); */
+    width: 10vw;
+    height: 10vh;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ainame{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    border: 2px solid rgb(101, 101, 236);
+    background: linear-gradient(135deg, #54dcdc, #3b88cf);
+}
+.ainame a:hover{
+    color: #0779eca3;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.ai a {
+    text-decoration: none;
+}
+
+ .container {
+    background-color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .article {
+    position: relative;
+    background: rgba(135, 206, 250, 0.3); /* transparent skyblue */
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+  }
+
+  .article:hover {
+    transform: translateY(-5px);
+  }
+
+  .article-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #000;
+  }
+
+  .article-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .hover-slide {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #81cdcd6c;
+    color: white;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    transition: bottom 0.3s ease;
+  }
+
+  .article:hover .hover-slide {
+    bottom: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+/* Basic Reset and Font */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    /* Clean, modern font */
+    color: #333333;
+    /* Dark text color */
+}
+
+/* Outer Container (The Beige Area) */
+.footer-container-outer {
+    background-color: #e8e4db;
+    /* Light beige/sand color */
+    padding: 30px 0;
+    /* Vertical padding */
+    display: flex;
+    justify-content: center;
+}
+
+/* Inner Container (The Teal Area) */
+.footer-container-inner {
+    width: 90%;
+    max-width: 1100px;
+    background-color: #99c6c4;
+    /* Light teal/blue-green color */
+    padding: 40px 60px 20px;
+    /* Padding inside the teal box */
+    box-sizing: border-box;
+}
+
+/* Header/Logo Section */
+.footer-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.footer-logo {
+    font-size: 2.5em;
+    font-weight: 400;
+    /* Lighter font weight */
+    margin: 0;
+}
+
+/* Main Content Area (Graphic and Links) */
+.footer-main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+/* Graphic Section (8 Black Squares) */
+.footer-graphic {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    /* Adjust padding/margin to align with link columns */
+    padding-top: 10px;
+}
+
+.diamond-pattern {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.square {
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    /* Black squares */
+    position: absolute;
+}
+
+/* Positioning the 8 squares in a diamond/star pattern using absolute positioning */
+/* Top, Bottom, Left, Right */
+.square:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.square:nth-child(2) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.square:nth-child(3) {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.square:nth-child(4) {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Diagonals */
+.square:nth-child(5) {
+    top: 15%;
+    left: 15%;
+}
+
+.square:nth-child(6) {
+    top: 15%;
+    right: 15%;
+}
+
+.square:nth-child(7) {
+    bottom: 15%;
+    left: 15%;
+}
+
+.square:nth-child(8) {
+    bottom: 15%;
+    right: 15%;
+}
+
+
+/* Links Columns Wrapper (The three columns) */
+.footer-links-wrapper {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    /* Space out the columns */
+    padding-left: 50px;
+    /* Space between graphic and links */
+}
+
+.footer-column {
+    flex-grow: 1;
+    max-width: 30%;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.8;
+    /* Make link text slightly lighter */
+    transition: opacity 0.2s;
+}
+
+.footer-column a:hover {
+    opacity: 1;
+}
+
+/* Bottom Bar Section (Copyright, Terms, Back to top) */
+.footer-bottom-bar {
+    display: flex;
+    justify-content: flex-start;
+    /* Start elements from the left */
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    /* Subtle separator line */
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.footer-bottom-bar p {
+    margin: 0;
+}
+
+/* Push the last two elements to the right */
+.footer-bottom-bar p:nth-child(2) {
+    margin-left: auto;
+    /* Pushes 'Terms of Service' to the far right */
+}
+
+.footer-bottom-bar p:nth-child(3) {
+    margin-left: 20px;
+    /* Space between Terms and Back to top */
+    text-align: right;
+    font-weight: 600;
+    /* Bold "Back to top" */
+}
+
+.footer-bottom-bar a {
+    color: inherit;
+    text-decoration: none;
+}

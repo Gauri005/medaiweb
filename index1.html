@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Full Window Health Triage Bot</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="chat-container" id="chatContainer">
+    <header class="chat-header">
+      <div class="title">Mr.Doc 🤖</div>
+      <div class="subtitle">Type symptoms (e.g., "I have fever for 2 days") — this is not a diagnosis.</div>
+    </header>
+
+    <main id="chat" class="chat-window" aria-live="polite"></main>
+
+    <div class="disclaimer">⚠️ This bot is for informational triage only. If there is severe difficulty breathing, chest pain, confusion, fainting, or unconsciousness — seek emergency care immediately. See sources below. </div>
+
+    <form id="inputForm" class="input-area" onsubmit="return false;">
+      <input id="message" autocomplete="off" placeholder="Write your symptoms..." />
+      <button id="sendBtn" type="button">Send</button>
+    </form>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>

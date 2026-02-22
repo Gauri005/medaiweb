@@ -1,0 +1,67 @@
+/* Full-page, 80% centered width, responsive */
+* { box-sizing: border-box; margin:0; padding:0; }
+html,body { height:100%; width:100%; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:#f4f7fb; }
+
+body { display:flex; justify-content:center; align-items:flex-start; padding:20px; }
+
+.chat-container {
+  width:80vw;           /* 80% width centered */
+  height:90vh;          /* tall window */
+  background: #fff;
+  border-radius:12px;
+  box-shadow: 0 12px 40px rgba(15,23,42,0.12);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+.chat-header{
+  padding:16px 20px;
+  background: linear-gradient(90deg,#5b6cff,#00c6ff);
+  color:#fff;
+}
+.chat-header .title { font-weight:700; }
+.chat-header .subtitle { font-size:13px; opacity:0.9; margin-top:6px; }
+
+.disclaimer{
+  font-size:13px;
+  color:#8b2b2b;
+  background:#fff5f5;
+  border-left:4px solid #ff6b6b;
+  padding:10px 14px;
+  margin:8px 16px;
+  border-radius:8px;
+}
+
+/* chat area */
+.chat-window{
+  flex:1;
+  padding:18px;
+  overflow-y:auto;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  background: linear-gradient(180deg,#fbfdff,#f9f9fb);
+}
+
+/* Bubble styles */
+.bubble{ max-width:78%; padding:12px 14px; border-radius:14px; line-height:1.35; word-break:break-word; }
+.user{ align-self:flex-end; background:linear-gradient(90deg,#eef2ff,#eef8ff); color:#0433ff; }
+.bot { align-self:flex-start; background:#f3f4f6; color:#111827; }
+
+/* typing indicator bubble (special) */
+.typing { display:inline-flex; gap:4px; align-items:center; padding:8px 12px; border-radius:12px; background:#e6eefc; }
+.typing .dot { width:6px; height:6px; border-radius:50%; background:#2b6cff; opacity:0.85; animation: blink 1s infinite; }
+.typing .dot:nth-child(2){ animation-delay:0.2s; }
+.typing .dot:nth-child(3){ animation-delay:0.4s; }
+@keyframes blink{ 0% {opacity:0.2} 50%{opacity:1} 100%{opacity:0.2} }
+
+/* input */
+.input-area { display:flex; gap:10px; padding:12px; border-top:1px solid #e6edf3; background:#fff; }
+#message { flex:1; padding:12px 14px; border-radius:999px; border:1px solid #dfe7f5; font-size:15px; }
+#sendBtn { padding:10px 18px; border-radius:999px; background:#5b6cff; color:white; border:none; cursor:pointer; font-weight:600; }
+
+@media (max-width:900px){
+  .chat-container{ width:95vw; height:100vh; border-radius:0; }
+  .disclaimer{ margin:6px 10px; }
+}
